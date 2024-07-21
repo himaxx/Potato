@@ -20,8 +20,8 @@ st.title('Potato Leaf Disease Prediction')
 @st.cache(allow_output_mutation=True)
 def load_model():
     model_path = 'final_model.h5'
-    model = keras.models.load_model(model_path, compile=False)
-    return keras.Sequential([hub.KerasLayer(model, input_shape=(256, 256, 3))])
+    model = keras.models.load_model(model_path, custom_objects={'KerasLayer': hub.KerasLayer})
+    return model
 
 model = load_model()
 
