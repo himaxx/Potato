@@ -11,4 +11,4 @@ SpeechRecognition==3.12.0
 typing_extensions==4.12.2
 urllib3==2.2.3
 tensorflow==2.16.1
-
+pyttsx3==2.98.0
